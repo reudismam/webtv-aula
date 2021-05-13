@@ -2,10 +2,13 @@ import { Icon } from '@material-ui/core';
 import { useContext } from 'react'
 import { HomeContext } from '../context/HomeContext';
 import styles from '../styles/Home.module.css';
+import {convertTimeToString} from '../utils/ConverterUtils';
 
 export default function Home() {
   const {
     videoRef,
+    canvasRef,
+    divRef,
     video,
     isPlaying,
     isMute,
@@ -19,8 +22,9 @@ export default function Home() {
   } = useContext(HomeContext);
   return (
     <div className={styles.container}>
+        <canvas className={styles.canvas} ref={canvasRef}></canvas>
         <div className={styles.video}>
-          <video className={styles.conteudo} src={video} ref={videoRef}></video>
+          <video className={styles.conteudo} src={video} ref={videoRef} hidden></video>
            
           <div className={styles.timeContainer}>
             <input 
@@ -54,8 +58,10 @@ export default function Home() {
                   >
                 </input>
                 <div className={styles.timeTotal}>
-                  <span>00:00</span> / <span>10:00</span>
+                  <span>{convertTimeToString(currentTime)}</span> / <span>{convertTimeToString(totalTime)}</span>
                 </div>
+          </div>
+          <div className={styles.images} ref={divRef}>
           </div>
         </div>
     </div>

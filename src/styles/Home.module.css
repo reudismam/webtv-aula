@@ -104,3 +104,21 @@
   width: 5px;
   background-color: #808080;
 }
+
+.canvas {
+  background-color: tomato;
+  width: 640px;
+  height: 360px;
+}
+
+.images {
+  display: flex;
+  /*grid-template-columns: repeat(5, 1fr);*/
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+}
+
+.images img {
+  margin: 2px;
+}
