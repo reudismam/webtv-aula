@@ -6,7 +6,6 @@
   align-items: flex-start;
   height: 100vh;
   margin-top: 10px;
-  background-color: blueviolet;
 }
 
 .video {
@@ -32,7 +31,7 @@
 .playControls {
   display: flex;
   align-items: center;
-  background-color: #808080;
+  background-color: #303030;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -40,10 +39,68 @@
   transform: translateY(-10%);
 }
 
-.time {
+.timeTotal {
   margin-left: 10px;
 }
 
 .playIcon {
   margin-left: 10px;
+}
+
+.muteIcon {
+  margin-left: 10px;
+}
+
+.timeContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #303030;
+  height: 10px;
+  transform: translateY(-35%);
+}
+
+.time {
+  margin: 0;
+  width: 95%;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #303030;
+  /*transform: translateY(-30%);*/
+}
+
+.time::-webkit-slider-runnable-track {
+  appearance: none;
+  background-color: #c4c4c4;
+  height: 5px;
+  border-radius: 10px;
+}
+
+.time::-webkit-slider-thumb {
+  appearance: none;
+  height: 5px;
+  width: 5px;
+  background-color: #808080;
+}
+
+.volumeControl {
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #303030;
+  /*transform: translateY(-30%);*/
+}
+
+.volumeControl::-webkit-slider-runnable-track {
+  appearance: none;
+  background-color: #c4c4c4;
+  height: 5px;
+  border-radius: 10px;
+}
+
+.volumeControl::-webkit-slider-thumb {
+  appearance: none;
+  height: 5px;
+  width: 5px;
+  background-color: #808080;
 }
